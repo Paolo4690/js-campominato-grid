@@ -40,6 +40,7 @@ header .left{
     display: flex;
     height: 70px;
     align-items: center;
+    gap: 1rem;
 }
 
 header .right{
@@ -64,34 +65,27 @@ button#play {
     margin: 50px 0;
 }
 
-.square-facile {
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.facile {
     flex: 0 0 calc(100% / 7);
     height: 57px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    cursor: pointer;
 }
 
-.square-medio {
+.medio {
     flex: 0 0 calc(100% / 9);
     height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    cursor: pointer;
 }
 
-.square-difficile {
+.difficile {
     flex: 0 0 calc(100% / 10);
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    cursor: pointer;
 }
 
 .color-cell {
