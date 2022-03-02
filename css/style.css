@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 header {
     width: 900px;
     margin: auto;
 }
+
 header::after{
     content: '';
     display: table;
@@ -15,13 +20,11 @@ header::after{
 }
 
 main {
-    background-color: aqua;
-    display: none;
+    background-color: #7fffd4;
+    display: flex;
+    height: 500px;
     justify-content: center;
     align-items: center;
-}
-.main-visible {
-    display: flex;
 }
 
 footer {
@@ -34,14 +37,17 @@ footer {
 
 header .left{
     float: left;
+    display: flex;
+    height: 70px;
+    align-items: center;
 }
 
 header .right{
     float: right;
-    height: 70px;
     display: flex;
     justify-content: end;
     align-items: center;
+    height: 70px;
     gap: .5rem;
 }
 
@@ -65,6 +71,7 @@ button#play {
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .square-medio {
@@ -74,6 +81,7 @@ button#play {
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .square-difficile {
@@ -83,4 +91,9 @@ button#play {
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    cursor: pointer;
+}
+
+.color-cell {
+    background-color: #6495ed;
 }
