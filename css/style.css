@@ -59,6 +59,7 @@ button#play {
 #container-campo-minato {
     display: flex;
     width: 400px;
+    height: 400px;
     flex-wrap: wrap;
     flex-grow: 0;
     flex-shrink: 0;
@@ -71,21 +72,6 @@ button#play {
     align-items: center;
     border: 1px solid black;
     cursor: pointer;
-}
-
-.facile {
-    flex: 0 0 calc(100% / 7);
-    height: 57px;
-}
-
-.medio {
-    flex: 0 0 calc(100% / 9);
-    height: 44px;
-}
-
-.difficile {
-    flex: 0 0 calc(100% / 10);
-    height: 40px;
 }
 
 .color-cell {

@@ -1,33 +1,23 @@
-const btnPlay = document.querySelector('#play');
-const optDifficolta = document.querySelector('#difficolta');
-const container = document.querySelector('#container-campo-minato')
+const eleBtnPlay = document.querySelector('#play');
+const eleOptDifficolta = document.querySelector('#difficolta');
+const eleContainer = document.querySelector('#container-campo-minato')
+const arrDifficolta =[100, 81, 49]
 
-btnPlay.addEventListener('click', function() {
-    container.innerHTML = ''
-    if (optDifficolta.value == 'facile') {
-        griglia(49)
-    } else if (optDifficolta.value == 'medio') {
-        griglia(81)
-    }else {
-        griglia(100)
-    }
-});
+eleBtnPlay.addEventListener('click', game)
 
-function griglia(numero) {     
-    for (let i = 1; i <= numero; i++) {
+function game() {
+    eleContainer.innerHTML = ''
+    const numBoxRow = Math.sqrt(arrDifficolta[eleOptDifficolta.value])
+
+    for (let i = 1; i <= arrDifficolta[eleOptDifficolta.value]; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
+        square.style.width = `calc(100% / ${numBoxRow})`
+        square.style.height = `calc(100% / ${numBoxRow})`
         square.innerHTML = i;
-        container.append(square);
-        if (numero == 49) {
-            square.classList.add('facile');
-        }   else if (numero == 81) {
-            square.classList.add('medio');
-        }   else {
-            square.classList.add('difficile');
-        }
+        eleContainer.append(square);
         square.addEventListener('click', function() {
-            square.classList.add('color-cell')
+            this.classList.add('color-cell')
         })
     }
 }
